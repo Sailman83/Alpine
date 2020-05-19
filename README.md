@@ -86,3 +86,5 @@ Test that docker can actually download docker images:
 ```bash
 docker run --rm hello-world
 ```
+## NFS Client
+https://wiki.alpinelinux.org/wiki/Setting_up_a_nfs-server
