@@ -96,3 +96,6 @@ mount -t nfs {ServerIP}:/{Folder in server} /mnt/NFS
 
 nano /etc/fstab
 {ServerIP}:/{Folder in server} /mnt/NFS  nfs      defaults    0       0
+
+you are using Oracle Direct NFS, and the NFS is running on Windows, there is a potential issue with permissions and ownership changes required.
+https://dbafox.com/oracle-direct-nfs-windows-nfs-server/
