@@ -88,3 +88,11 @@ docker run --rm hello-world
 ```
 ## NFS Client
 https://wiki.alpinelinux.org/wiki/Setting_up_a_nfs-server
+
+mkdir /mnt/NFS/
+mount -t nfs {ServerIP}:/{Folder in server} /mnt/NFS
+
+### Automatically Mounting NFS File Systems with /etc/fstab
+
+nano /etc/fstab
+{ServerIP}:/{Folder in server} /mnt/NFS  nfs      defaults    0       0
