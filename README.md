@@ -8,7 +8,9 @@ login as root and type:
 setup-alpine
 ```
 
-and answer the questions of the wizard,including changing the root password.Alpine setup is possibly the easiest linux setup.Defaults are fine except in the disk creation.After selecting disk (sda) and purpose (sys), at least for this simple use case, type (y) in the warning:erase the above disk and continue ? question.
+and answer the questions of the wizard,including changing the root password.
+Alpine setup is possibly the easiest linux setup.Defaults are fine except in the disk creation.
+After selecting disk (sda) and purpose (sys), at least for this simple use case, type (y) in the warning:erase the above disk and continue ? question.
 
 Alpine will prepare the portion of the hard disk allocated to our VM and will ask to reboot.
 
