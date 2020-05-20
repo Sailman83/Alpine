@@ -99,3 +99,20 @@ nano /etc/fstab
 
 you are using Oracle Direct NFS, and the NFS is running on Windows, there is a potential issue with permissions and ownership changes required.
 https://dbafox.com/oracle-direct-nfs-windows-nfs-server/
+## SMB Client
+https://www.hiroom2.com/2017/08/21/alpinelinux-3-6-cifs-utils-en/
+apk add cifs-utils
+rc-update add netmount
+
+mkdir /mnt/SMB
+nano /mnt/credentials
+```bash
+username=alpine
+password=xxxx
+domaine=SAILMAN
+```
+chmod 600 /etc/samba/credentials
+mount -t cifs -o credentials=/mnt/credentials "//{SMB_SERVER}/{Folder shared}" /mnt/SMB
+
+nano /etc/fstab
+//{SMB_SERVER}/{Folder shared} /Mnt/SMB cifs credentials=/mnt/credentials,_netdev 0 0" 
