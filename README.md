@@ -112,7 +112,7 @@ password=xxxx
 domaine=SAILMAN
 ```
 chmod 600 /etc/samba/credentials
-mount -t cifs -o credentials=/mnt/credentials "//{SMB_SERVER}/{Folder shared}" /mnt/SMB
+ mount -t cifs -o rw,vers=3.0,sec=ntlmssp,file_mode=0777,dir_mode=0777,credentials=/mnt/credentials "{SMB_SERVER}/{Folder shared}" /mnt/SMB
 
 nano /etc/fstab
 //{SMB_SERVER}/{Folder shared} /Mnt/SMB cifs credentials=/mnt/credentials,_netdev 0 0" 
