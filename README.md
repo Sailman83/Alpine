@@ -116,3 +116,14 @@ chmod 600 /etc/samba/credentials
 
 nano /etc/fstab
 //{SMB_SERVER}/{Folder shared} /Mnt/SMB cifs credentials=/mnt/credentials,_netdev 0 0" 
+
+## IMPORTANT 
+L'ordre de démarrage en cas d'erreur du a un montage de réseau
+
+rc-update -all
+
+boot:
+-netmount
+
+default
+- docker
